@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Shantell+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  background-color: #EDF2EC;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0 0 5px;
+}
+
+
+/* Faq */
+
+.accordion {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.accordion-item {
+  margin-bottom: 5px;
+
+  border-bottom: 1px solid #808080;
+}
+
+.accordion-title {
+
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+
+  color: blue;
+  cursor: pointer;
+
+  transition: background .2s ease-out;
+}
+
+.text_close {
+  display: flex;
+}
+
+.close{
+  position: absolute;
+ 
+  right: 60vh;
+
+  cursor: pointer;
+  display: none;
+ 
+}
+
+.close:before,
+.close:after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 10px;
+  width: 13px;
+  height: 2px;
+  background: black;
+}
+
+.close:before {
+ 
+  transform: rotate(90deg);
+}
+
+.close:after {
+  
+  transform: rotate(-180deg);
+}
+
+.open{
+  position: absolute;
+ 
+  right: 60vh;
+
+  cursor: pointer;
+  display: none;
+ 
+}
+
+.open:before,
+.open:after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 10px;
+  width: 13px;
+  height: 2px;
+  background: black;
+}
+
+.open:before {
+ 
+  transform: rotate(40deg);
+}
+
+.open:after {
+  
+  transform: rotate(-45deg);
+}
+
+.accordion:hover .accordion-title {
+  color: black;
+}
+
+.accordion-input {
+  width: 0;
+  height: 0;
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+.first.accordion-item{
+  display: block;
+}
+
+.accordion-text#first {
+  display: block;
+}
+
+.accordion-input:checked ~ .accordion-text#first {
+  display: none;
+  
+}
+
+
+.accordion-input:checked ~ .accordion-text {
+  display: block;
+  background-color: rgba(220, 155, 225, 0.2);
+  filter: saturate(1.5);
+}
+.accordion-input:checked ~ .text_close {
+ 
+  background-color: rgba(220, 155, 225, 0.2);
+
+  
+ 
+}
+
+
+.accordion-text {
+  display: none;
+  padding: 10px 15px;
+
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.accordion:hover .close{
+  display: block;
+}
+
+.accordion-item:hover .open{
+  display: block;
+}
+.accordion-item:hover .close{
+  display: none;
+}
+
+ .accordion-text:active {
+  filter: grayscale(1); 
+  transform: scale(1.2);
+  transition: 1s;
+ 
+ 
+
+} 
+ 
+
+
+.accordion-item:hover .accordion-text{
+  display: block;
+  transition: 1.5s; 
+  
+  cursor: pointer;
+}
+
+@media screen and (width: 320px) {
+  .title_accordion{
+    font-family: "Roboto";
+  }
+  .accordion-title{
+
+  font-family: "Roboto";
+  }
+  .close {
+  
+    right: 10vh;
+  }
+  img {
+    width: 100%;
+  }
+}
+@media screen and (width: 820px) {
+  .title_accordion{
+    font-family: "Cabin";
+  }
+  .accordion-title{
+
+  font-family: "Cabin";
+  }
+  .close {
+  
+    right: 20vh;
+  }
+  img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1919px) {
+
+  .title_accordion{
+    font-family: "Pacifico";
+  }
+  .accordion-title{
+
+  font-family: "Pacifico";
+  }
+  .close {
+  
+    right: 70vh;
+  }
+  img {
+    width: 50%;
+  }
+}
+
+
+
+
+
